@@ -84,14 +84,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Steve's aliases
+alias ll="ls -lah"
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 export HISTSIZE=10000 i
 
-export M2_HOME=/usr/local/apache-maven-3.3.9 
+export M2_HOME=/usr/local/apache-maven-3.3.9
 export PATH=$PATH:$M2_HOME/bin
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:/usr/local/lib/node_modules/azure-cli/bin"
+export PATH="$PATH:/usr/local/kafka_2.11-0.9.0.0/bin"
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH=/Users/swomack/gocode
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home
 source ~/aws/.aws_creds
@@ -99,3 +103,16 @@ source ~/aws/.aws_creds
 alias start-zoo="/usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties"
 alias start-kafka="/usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties"
 
+alias yolo="gcam 'yolo'"
+alias lkafka="kafka-topics.sh --list --zookeeper localhost:2181"
+
+alias bpush="mvn clean install -DskipTests; cf push"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/swomack/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/swomack/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/swomack/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/swomack/google-cloud-sdk/completion.zsh.inc'
