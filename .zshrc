@@ -116,3 +116,13 @@ fi
 # The next line enables shell command completion for gcloud.
 if [ -f /Users/swomack/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/swomack/google-cloud-sdk/completion.zsh.inc'
+fi
+
+export GOVC_URL=https://vcsa-01.haas-93.pez.pivotal.io
+export GOVC_USERNAME=administrator@vsphere.local
+export GOVC_PASSWORD=USXGwV4RnBAO!
+
+alias h='history | grep '
+export PATH="$PATH:/Users/swomack/istio/istio-0.8.0/bin"
+export PATH="$PATH:/usr/local/share/dotnet/"
+export VAULT_ADDR='https://vault.pez.pivotal.io:8200'
